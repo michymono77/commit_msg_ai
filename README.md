@@ -35,11 +35,11 @@ To use the commit_msg_ai gem, you need to provide your OpenAI API token. This to
 
 Follow these steps to set the OPENAI_ACCESS_TOKEN environment variable:
 
-** 1. Obtain your OpenAI API key:**
+**1. Obtain your OpenAI API key:**
 
 Go to OpenAI's API page and generate a new API key.
 
-** 2. Set the environment variable: **
+**2. Set the environment variable:**
 
 On macOS/Linux: Open your terminal and add the following line to your shell configuration file (~/.bashrc, ~/.zshrc, or ~/.bash_profile depending on the shell you're using):
 
@@ -63,7 +63,7 @@ setx OPENAI_ACCESS_TOKEN "your-api-key-here"
 
 Alternatively, you can add the environment variable through the System Properties > Environment Variables settings.
 
-** 3. Verify that the variable is set correctly: **
+**3. Verify that the variable is set correctly:**
 
 You can check if the environment variable is set by running this command:
 
