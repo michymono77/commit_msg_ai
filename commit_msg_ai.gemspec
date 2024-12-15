@@ -9,5 +9,10 @@ Gem::Specification.new do |s|
   s.authors     = ['Michiharu Ono']
   s.email       = 'michiharuono77@gmail.com'
   s.files       = ['lib/commit_msg_ai.rb', 'lib/commit_msg_ai/cli.rb']
+  s.add_dependency 'ruby-openai', '~> 7.3'
+  s.add_dependency 'faraday_middleware', '~> 1.2'
+  s.add_development_dependency 'rspec', '~> 3.13'
+  s.add_development_dependency 'rubocop', '~> 1.6'
+  s.required_ruby_version = '>= 3.0'
   s.license = 'MIT'
 end
