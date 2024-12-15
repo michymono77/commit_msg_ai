@@ -30,10 +30,8 @@ $ ./lib/commit_msg_ai.rb
 ```
 This makes the commit_msg_ai.rb file executable, allowing you to run it directly from the terminal without needing to prepend ruby.
 
-### Setting the OPENAI_ACCESS_TOKEN
-To use the commit_msg_ai gem, you need to provide your OpenAI API token. This token is required for authenticating requests to the OpenAI API.
-
-Follow these steps to set the OPENAI_ACCESS_TOKEN environment variable:
+### Setting the `OPENAI_ACCESS_TOKEN`
+To use the commit_msg_ai gem, you need to provide your OpenAI API token. This token is required for authenticating requests to the OpenAI API. Follow these steps to set the OPENAI_ACCESS_TOKEN environment variable:
 
 **1. Obtain your OpenAI API key:**
 
