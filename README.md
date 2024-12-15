@@ -2,17 +2,12 @@
 
 ### Bundler
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem "commit_msg_ai"
-```
-
-And then execute:
+To install the gem locally, run:
 
 ```bash
-$ bundle install
+gem install "commit_msg_ai"
 ```
+This gem is meant to be used locally and does not need to be added to your Gemfile.
 
 ### Making the Script Executable
 After installation, if you want to run the commit_msg_ai.rb script directly from the command line, you need to set the executable flag for the file.
