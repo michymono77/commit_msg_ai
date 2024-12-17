@@ -2,7 +2,7 @@
 
 require 'openai'
 require 'faraday_middleware'
-require_relative "commit_msg_ai/version"
+require_relative 'commit_msg_ai/version'
 
 module CommitMsgAi
   class << self

@@ -1,0 +1,53 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.3
+  Exclude:
+    - 'bin/**/*'
+
+Layout/LineLength:
+  Max: 150
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/ClassLength:
+  Max: 200 # Encourage modular code by splitting large classes
+
+Metrics/BlockLength:
+  Max: 20 # Keep blocks concise and readable
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: true # Require documentation for public classes and modules
+
+Style/GuardClause:
+  Enabled: true # Favor guard clauses to reduce nesting
+
+Style/RedundantFreeze:
+  Enabled: true # Avoid redundant `.freeze` in modern Ruby
+
+Lint/UselessAssignment:
+  Enabled: true # Avoid unused variable assignments
+
+Lint/DuplicateMethods:
+  Enabled: true # Detect duplicate method definitions
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: true # Ensure clarity when passing blocks
+
+Style/NumericLiterals:
+  Enabled: true # Improve readability of large numbers with underscores
+
+Lint/RedundantCopDisableDirective:
+  Enabled: true # Detect redundant 'rubocop:disable' comments
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true # Add empty lines for better readability around module definitions
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true # Add empty lines for better readability around class definitions
+
+Gemspec/RequiredRubyVersion:
+  Enabled: true # Ensure gemspec includes the required Ruby version
