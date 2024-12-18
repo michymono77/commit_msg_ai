@@ -5,7 +5,7 @@ require 'faraday_middleware'
 require_relative 'commit_msg_ai/version'
 
 module CommitMsgAi
-  class << self
+  class Client
     def initialize(api_token)
       @client = OpenAI::Client.new(
         access_token: api_token,

@@ -10,20 +10,14 @@ gem install "commit_msg_ai"
 This gem is meant to be used locally and does not need to be added to your Gemfile.
 
 ### Making the Script Executable
-After installation, if you want to run the commit_msg_ai.rb script directly from the command line, you need to set the executable flag for the file.
-
-If you don’t set the executable flag, you would have to run the Ruby file like this:
-
+First, ensure the script has executable permissions:
 ```bash
-$ ruby lib/commit_msg_ai.rb
+$ chmod +x bin/commit_msg_ai
 ```
-After running the following command to set the executable flag, you can run the script like this (assuming the file starts with a valid shebang line):
-
+This makes the file runnable as a script. You can now run the executable directly from the terminal:
 ```bash
-$ chmod +x lib/commit_msg_ai.rb
-$ ./lib/commit_msg_ai.rb
+$ ./bin/commit_msg_ai
 ```
-This makes the commit_msg_ai.rb file executable, allowing you to run it directly from the terminal without needing to prepend ruby.
 
 ### Setting the `OPENAI_ACCESS_TOKEN`
 To use the commit_msg_ai gem, you need to provide your OpenAI API token. This token is required for authenticating requests to the OpenAI API. Follow these steps to set the OPENAI_ACCESS_TOKEN environment variable:

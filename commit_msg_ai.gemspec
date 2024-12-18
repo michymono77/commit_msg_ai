@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = CommitMsgAi::VERSION
   s.executables << 'commit_msg_ai'
   s.summary     = 'Generate commit messages effortlessly using OpenAI.'
-  s.description = 'CommitMsgAI is a CLI tool that leverages OpenAI to generate commit messages following the Conventional Commits standard.'
+  s.description = 'CLI tool that leverages OpenAI to generate commit messages following the Conventional Commits standard.'
   s.authors     = ['Michiharu Ono']
   s.email       = 'michiharuono77@gmail.com'
   s.files       = Dir.glob('lib/**/*.rb')

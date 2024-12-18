@@ -6,6 +6,7 @@ require 'commit_msg_ai'
 
 module CommitMsgAi
   class Cli
+
     def self.run
       api_token = ENV.fetch('OPENAI_ACCESS_TOKEN', nil)
 
@@ -20,8 +21,9 @@ module CommitMsgAi
         exit 0
       end
 
-      commit_ai = CommitMsgAi.new(api_token)
+      commit_ai = CommitMsgAi::Client.new(api_token)
       commit_message = commit_ai.generate_commit_message(diff)
+
       final_message = ask_user_to_confirm_or_edit(commit_message)
       subject, body = split_commit_message(final_message)
 
