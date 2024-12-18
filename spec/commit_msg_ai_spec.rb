@@ -3,7 +3,7 @@
 require 'spec_helper'
 require 'commit_msg_ai'
 
-RSpec.describe CommitMsgAi, type: :class do
+RSpec.describe CommitMsgAi::Client, type: :class do
   let(:api_token) { 'test_token' }
   let(:commit_msg_ai) { described_class.new(api_token) }
 
