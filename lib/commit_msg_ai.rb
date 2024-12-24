@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'openai'
-require 'faraday_middleware'
 require_relative 'commit_msg_ai/version'
 
 module CommitMsgAi

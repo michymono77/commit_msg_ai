@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Michiharu Ono']
   s.email       = 'michiharuono77@gmail.com'
   s.files       = Dir.glob('lib/**/*.rb')
-  s.add_dependency 'faraday_middleware', '~> 1.2'
+  s.add_dependency 'faraday', '~> 2.1'
   s.add_dependency 'ruby-openai', '~> 7.3'
   s.required_ruby_version = '>= 3.0'
   s.license = 'MIT'
@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop', '~> 1.6'
   s.add_development_dependency 'bundler-audit', '~> 0.9'
   s.add_development_dependency 'pry', '~> 0.14.0'
+  s.add_development_dependency 'github_changelog_generator', '~> 1.16'
 end
