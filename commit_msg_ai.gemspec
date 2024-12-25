@@ -13,13 +13,13 @@ Gem::Specification.new do |s|
   s.files       = Dir.glob('lib/**/*.rb')
   s.add_dependency 'faraday', '~> 2.1'
   s.add_dependency 'ruby-openai', '~> 7.3'
-  s.required_ruby_version = '>= 3.0'
+  s.required_ruby_version = '>= 3.3'
   s.license = 'MIT'
   s.metadata['rubygems_mfa_required'] = 'true'
 
+  s.add_development_dependency 'bundler-audit', '~> 0.9'
+  # s.add_development_dependency 'github_changelog_generator', '~> 1.16'
+  s.add_development_dependency 'pry', '~> 0.14.0'
   s.add_development_dependency 'rspec', '~> 3.13'
   s.add_development_dependency 'rubocop', '~> 1.6'
-  s.add_development_dependency 'bundler-audit', '~> 0.9'
-  s.add_development_dependency 'pry', '~> 0.14.0'
-  s.add_development_dependency 'github_changelog_generator', '~> 1.16'
 end

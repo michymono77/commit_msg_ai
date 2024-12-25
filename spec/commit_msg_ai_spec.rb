@@ -13,8 +13,9 @@ RSpec.describe CommitMsgAi::Client, type: :class do
     end
 
     context 'when OpenAI API returns a valid response' do
+      let(:target_commit_msg) { 'feat: add new feature' }
       let(:api_response) do
-        { 'choices' => [{ 'message' => { 'content' => 'feat: add new feature' } }] }
+        { 'choices' => [{ 'message' => { 'content' => target_commit_msg } }] }
       end
 
       before do
@@ -23,7 +24,7 @@ RSpec.describe CommitMsgAi::Client, type: :class do
 
       it 'returns the generated commit message' do
         message = commit_msg_ai.generate_commit_message(diff)
-        expect(message).to eq('feat: add new feature')
+        expect(message).to eq(target_commit_msg)
       end
     end
 

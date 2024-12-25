@@ -15,11 +15,12 @@ RSpec.describe CommitMsgAi::Cli, type: :class do
     end
 
     context 'when there are staged changes' do
+      let(:target_commit_msg) { 'feat: add new feature' }
+
       it 'generates a commit message and commits the changes' do
-        commit_message = 'feat: add new feature'
-        allow_any_instance_of(CommitMsgAi::Client).to receive(:generate_commit_message).and_return(commit_message)
-        allow(described_class).to receive(:ask_user_to_confirm_or_edit).and_return(commit_message)
-        allow(described_class).to receive(:split_commit_message).and_return([commit_message, ''])
+        allow_any_instance_of(CommitMsgAi::Client).to receive(:generate_commit_message).and_return(target_commit_msg)
+        allow(described_class).to receive(:ask_user_to_confirm_or_edit).and_return(target_commit_msg)
+        allow(described_class).to receive(:split_commit_message).and_return([target_commit_msg, ''])
 
         expect { described_class.run }.to output(/Final Commit Message:/).to_stdout
       end

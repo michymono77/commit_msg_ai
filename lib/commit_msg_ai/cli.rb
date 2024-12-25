@@ -6,7 +6,6 @@ require 'commit_msg_ai'
 
 module CommitMsgAi
   class Cli
-
     def self.run
       api_token = ENV.fetch('OPENAI_ACCESS_TOKEN', nil)
 
