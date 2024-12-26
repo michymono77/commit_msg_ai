@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.metadata['rubygems_mfa_required'] = 'true'
 
   s.add_development_dependency 'bundler-audit', '~> 0.9'
-  # s.add_development_dependency 'github_changelog_generator', '~> 1.16'
+  s.add_development_dependency 'github_changelog_generator', '~> 1.16'
   s.add_development_dependency 'pry', '~> 0.14.0'
   s.add_development_dependency 'rspec', '~> 3.13'
   s.add_development_dependency 'rubocop', '~> 1.6'
