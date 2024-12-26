@@ -26,4 +26,9 @@ jobs:
         run: bundle install
 
       - name: Run RSpec tests
-        run: bundle exec rspec
+        run: bundle exec rspec --no-warnings
+
+      - name: Debugging RSpec Exit Code
+        run: |
+          bundle exec rspec
+          echo "RSpec Exit Code: $?"
