@@ -19,16 +19,15 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3 # Specify the Ruby version your gem uses
-          bundler-cache: true # Caches 'bundle install'
+          ruby-version: 3.3.6
+          bundler-cache: true
 
       - name: Install dependencies
         run: bundle install
 
       - name: Run RSpec tests
-        run: bundle exec rspec --no-warnings
-
-      - name: Debugging RSpec Exit Code
+        env:
+          RUBYOPT: -W0 # Suppress Ruby warnings
         run: |
           bundle exec rspec
           echo "RSpec Exit Code: $?"
