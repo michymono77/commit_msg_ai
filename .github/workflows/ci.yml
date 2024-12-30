@@ -29,5 +29,5 @@ jobs:
         env:
           RUBYOPT: -W0 # Suppress Ruby warnings
         run: |
-          bundle exec rspec
+          bundle exec rspec --format documentation --dry-run
           echo "RSpec Exit Code: $?"

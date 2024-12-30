@@ -4,6 +4,10 @@ require 'openai'
 require_relative 'commit_msg_ai/version'
 
 module CommitMsgAi
+  # ================================================================================
+  # This class interacts with the Commit Message AI service to process and generate
+  # meaningful commit messages based on staged changes in the repository.
+  # ================================================================================
   class Client
     def initialize(api_token)
       @client = OpenAI::Client.new(

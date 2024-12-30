@@ -5,6 +5,12 @@ require 'shellwords'
 require 'commit_msg_ai'
 
 module CommitMsgAi
+  # ================================================================================
+  # The `CommitMsgAi::Cli` class provides a command-line interface for generating
+  # commit messages using the Commit Message AI service. It fetches the staged git
+  # diff, communicates with the AI service to generate a commit message, and allows
+  # the user to confirm or edit the message before committing the changes.
+  # ================================================================================
   class Cli
     def self.run
       api_token = ENV.fetch('OPENAI_ACCESS_TOKEN', nil)
