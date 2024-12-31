@@ -1,0 +1,26 @@
+name: Generate Changelog
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set Up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.3.6
+
+    - name: Install github_changelog_generator
+      run: gem install github_changelog_generator
+
+    - name: Generate Changelog
+      env:
+        CHANGELOG_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: github_changelog_generator
