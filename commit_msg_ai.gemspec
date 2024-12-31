@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop', '~> 1.6'
 
   # Post-install message to install Node.js dependencies
-  spec.post_install_message = <<~MESSAGE
+  s.post_install_message = <<~MESSAGE
     After installing the gem, please run the following command to install Node.js dependencies:
       npm install -g conventional-changelog-cli
 
