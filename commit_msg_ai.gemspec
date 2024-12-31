@@ -22,4 +22,13 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry', '~> 0.14.0'
   s.add_development_dependency 'rspec', '~> 3.13'
   s.add_development_dependency 'rubocop', '~> 1.6'
+
+  # Post-install message to install Node.js dependencies
+  spec.post_install_message = <<~MESSAGE
+    After installing the gem, please run the following command to install Node.js dependencies:
+      npm install -g conventional-changelog-cli
+
+    You can then add a changelog by running:
+      conventional-changelog -p angular -i CHANGELOG.md -s
+  MESSAGE
 end
