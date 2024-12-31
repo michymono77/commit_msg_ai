@@ -21,4 +21,4 @@ jobs:
       run: gem install github_changelog_generator
 
     - name: Generate Changelog
-      run: github_changelog_generator -u michymono77 -p commit-ai-msg
+      run: github_changelog_generator -u michymono77 -p commit-msg-ai
