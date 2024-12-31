@@ -1,0 +1,26 @@
+name: Auto Tag on Push
+
+on:
+  push:
+    branches:
+      - master  # Trigger only on the master branch
+
+jobs:
+  auto-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Get Current Version
+      id: get_version
+      run: |
+        echo "::set-output name=tag::v$(date +'%Y.%m.%d.%H%M')"
+
+    - name: Create Tag
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git tag ${{ steps.get_version.outputs.tag }}
+        git push origin ${{ steps.get_version.outputs.tag }}
