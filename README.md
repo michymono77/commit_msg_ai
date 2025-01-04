@@ -1,3 +1,8 @@
+## Commit Message AI
+This repository is a bare minimum setup to use the ChatGPT API for generating commit messages. Feel free to hardfork this repository to suit your needs.
+
+You can visit OpenAI's Model Documentation to test out different models (e.g., gpt-3.5-turbo-0125) in the lib/commit_msg_ai.rb file.
+
 ## Installation
 
 ### Bundler
