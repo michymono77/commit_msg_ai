@@ -17,7 +17,7 @@ jobs:
       id: get_version
       run: |
         # Load the version from the Ruby file
-        VERSION=$(ruby -e "require_relative 'lib/commit_msg_ai/version'; puts CommitMsgAi::VERSION")
+        VERSION=$(ruby -e "Dir.chdir('$(pwd)') { require_relative 'lib/commit_msg_ai/version'; puts CommitMsgAi::VERSION }")
         echo "Gem version: $VERSION"
         echo "::set-output name=tag::v$VERSION"
 
