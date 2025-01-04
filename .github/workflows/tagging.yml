@@ -16,9 +16,8 @@ jobs:
     - name: Get Gem Version
       id: get_version
       run: |
-        # Extract version from the gemspec file
-        GEMSPEC_FILE=$(ls *.gemspec)
-        VERSION=$(grep -Eo 'spec.version\s*=\s*["\'][0-9]+\.[0-9]+\.[0-9]+["\']' "$GEMSPEC_FILE" | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+')
+        # Load the version from the Ruby file
+        VERSION=$(ruby -e "require_relative 'lib/commit_msg_ai/version'; puts CommitMsgAi::VERSION")
         echo "Gem version: $VERSION"
         echo "::set-output name=tag::v$VERSION"
 
