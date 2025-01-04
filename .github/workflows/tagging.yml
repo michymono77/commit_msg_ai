@@ -16,10 +16,11 @@ jobs:
     - name: Get Gem Version
       id: get_version
       run: |
-        # Load the version from the Ruby file
-        VERSION=$(ruby -e "Dir.chdir('$(pwd)') { require_relative 'lib/commit_msg_ai/version'; puts CommitMsgAi::VERSION }")
+        # Extract version directly from the version file
+        VERSION=$(grep -Eo 'VERSION\s*=\s*["'"'"'][0-9]+\.[0-9]+\.[0-9]+["'"'"']' lib/commit_msg_ai/version.rb | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+')
         echo "Gem version: $VERSION"
         echo "::set-output name=tag::v$VERSION"
+
 
     - name: Create Tag
       run: |
