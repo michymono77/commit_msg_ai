@@ -26,9 +26,10 @@ Gem::Specification.new do |s|
   # Post-install message to install Node.js dependencies
   s.post_install_message = <<~MESSAGE
     After installing the gem, please run the following command to install Node.js dependencies:
-      npm install -g conventional-changelog-cli
+      npm install -g standard-version
 
     You can then add a changelog by running:
-      conventional-changelog -p angular -i CHANGELOG.md -s
+      npx standard-version --no-tag
+    This refers the version defined in the package.json file.
   MESSAGE
 end
